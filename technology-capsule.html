@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="technology.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body>
+
+
+
+ 
+  <nav class="navbar navbar-expand-lg bg-body-transparent">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF"/><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/></g></svg></a>
+      <button class="navbar-toggler btn-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon text-white"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white active" aria-current="page" href="index.html">00 Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="destination-europa.html">01 Destination</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="crew-commander.html">02 Crew</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="technology-capsule.html">03 Technology</a>
+          </li>
+        
+        </ul>
+     
+      </div>
+    </div>
+  </nav>
+  <!-- nav bar end -->
+
+  <div class="container text">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 class="text-white">
+          <span>03</span> Space launch 101
+        </h1>
+      <div class="row ">
+        <div class="col-md-4 text-center">
+          <div class="circle">
+            <div class="btn" data-vehicle="LaunchVehicle">1</div>
+          </div>
+          <div class="circle">
+            <div class="btn" data-vehicle="Spaceport">2</div>
+          </div>
+          <div class="circle">
+            <div class="btn" data-vehicle="SpaceCapsule">3</div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <h6 class="text-white" >THE TECHNOLOGY</h6>
+          <h1 class="text-white" id="vehicle">LAUNCH VEHICLE</h1>
+          <p class="text-white" id="description"> A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
+            capsule to reenter the Earth's atmosphere without wings. Our capsule is where 
+            you'll spend your time during the flight. It includes a space gym, cinema, 
+            and plenty of other activities to keep you entertained.</p>
+        </div>
+      </div>
+      </div>
+      <div class="col-md-6" id="image">
+        <img data-aos="zoom-in-right" style=" width: 100%; height: 100%;" src="assets/technology/image-launch-vehicle-portrait.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Function to update content based on the crew
+      function updateContent(vehicle) {
+        const technology = {
+          'LaunchVehicle': {
+            name: "Launch vehicle",
+               images: {
+                  portrait: "./assets/technology/image-launch-vehicle-portrait.jpg",
+                 landscape: "./assets/technology/image-launch-vehicle-landscape.jpg"
+                 },
+                description: "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!"
+          },
+         'Spaceport': {
+           name: "Spaceport",
+            images: {
+            portrait: "./assets/technology/image-spaceport-portrait.jpg",
+            landscape: "./assets/technology/image-spaceport-landscape.jpg"
+      },
+            description: "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch."
+          },
+          'SpaceCapsule': {
+      name: "Space capsule",
+      images: {
+        portrait: "./assets/technology/image-space-capsule-portrait.jpg",
+        landscape: "./assets/technology/image-space-capsule-landscape.jpg"
+      },
+      description: "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained."
+          }
+ 
+        };
+  
+        $('#vehicle').text(technology[vehicle].name);
+         $('#image img').attr('src', technology[vehicle].images.portrait); // Use portrait image
+  $('#description').text(technology[vehicle].description);
+      }
+  
+      // Listen for button clicks
+      $('.btn').on('click', function() {
+        const techData = $(this).data('vehicle');
+        updateContent(techData);
+      });
+  
+      // Initially, set the content to a default crew member (e.g., engineer)
+      updateContent('LaunchVehicle');
+    });
+  </script>
+  
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <script>
+     AOS.init();
+   </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>
+
+ 
+
+
+  

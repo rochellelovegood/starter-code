@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;1,300;1,400&family=Nunito:ital,wght@0,200;1,200&family=Outfit:wght@300&family=Pacifico&family=Poppins:ital,wght@0,200;0,400;1,200&family=Space+Grotesk:wght@300;400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('/assets/home/background-home-desktop.jpg');
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Space Grotesk',Arial, Helvetica, sans-serif
+    ;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Add other background properties as needed */
+}
+
+/* Apply blur effect to the navbar collapse */
+.collapse.navbar-collapse {
+    top: 10px;
+    backdrop-filter: blur(10px); /* Apply the blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    position: relative; /* Ensure z-index works correctly */
+}
+
+.navbar{
+    padding: 20px;
+   
+}
+
+/* Apply typing animation to the typing-text */
+.typing-text {
+    overflow: hidden;
+    border-right: .15em solid white; /* Create a typing cursor */
+    white-space: nowrap;
+    animation: typing 4s steps(40) infinite, blink-caret .75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+  }
+  
+
+.navbar-nav .nav-link {
+    color: white;
+    width: 100%;
+    font-size: 20px; /* Adjust the font size as needed */
+}
+.container.text {
+    margin-bottom: 20px; /* Adjust the margin as needed to lower the div */
+}
+
+/* Apply rotating animation to the rotating-circle */
+.Explore .rotating-circle {
+    width: 200px;
+    height: 200px;
+    animation: rotate 4s linear infinite; /* Slower animation */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Creates a circle */
+    background-color: #fff;
+  }
+  
+  /* Style the text inside the circle */
+  .Explore .circle-text {
+    font-size: 24px; /* Adjust the text size */
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

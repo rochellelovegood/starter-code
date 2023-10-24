@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;1,300;1,400&family=Nunito:ital,wght@0,200;1,200&family=Outfit:wght@300&family=Pacifico&family=Poppins:ital,wght@0,200;0,400;1,200&family=Space+Grotesk:wght@300;400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('/assets/crew/background-crew-desktop.jpg');
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Space Grotesk',Arial, Helvetica, sans-serif
+    ;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Add other background properties as needed */
+}
+.collapse.navbar-collapse {
+    top: 10px;
+    backdrop-filter: blur(10px); /* Apply the blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    position: relative; /* Ensure z-index works correctly */
+}
+
+.navbar{
+    padding: 20px;
+   
+}
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+   .dot:hover {
+    background-color: #717171;
+  }
