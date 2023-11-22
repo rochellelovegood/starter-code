@@ -29,18 +29,31 @@ body {
    
 }
 
-/* Apply typing animation to the typing-text */
-.typing-text {
-    overflow: hidden;
-    border-right: .15em solid white; /* Create a typing cursor */
-    white-space: nowrap;
-    animation: typing 4s steps(40) infinite, blink-caret .75s step-end infinite;
-  }
-  
-  @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-  }
+/* Typing animation applied to the typing-text in h1 */
+.typing-text-h1 {
+  overflow: hidden;
+
+  white-space: nowrap;
+  animation: typing-h1 4s steps(40) 1s infinite, blink-caret .75s step-end 5s infinite;
+}
+
+@keyframes typing-h1 {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Typing animation applied to the typing-text in p */
+.typing-text-p {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing-p 4s steps(40) 1s forwards, blink-caret .75s step-end 5s infinite;
+}
+
+@keyframes typing-p {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
   
   @keyframes blink-caret {
     from, to { border-color: transparent; }

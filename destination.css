@@ -51,7 +51,7 @@ body {
 }
 .typing-text {
     overflow: hidden;
-    border-right: .15em solid white; /* Create a typing cursor */
+   
     white-space: nowrap;
     animation: typing 3s steps(40) infinite, blink-caret .75s step-end infinite;
   }
